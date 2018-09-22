@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <iostream>
 
-// Question Two: Sum of all even fibonacci numbers bellw 4,000,000
+// Question Two: Sum of all even fibonacci numbers below 4,000,000
 
 int questionTwo() {
 	int count = 0;
@@ -18,6 +18,6 @@ int questionTwo() {
 }
 
 int main () {
-	printf("The answer to this question is : %i \n", questionTwo());
+	printf("The answer sum of all even fibonacci numbers below 4,000,000 is: %i \n", questionTwo());
 	return 0;
 }

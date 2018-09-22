@@ -1,17 +1,31 @@
-all: q1 q2
+all:q1 q2 q3 q4
 
-q1: questionOne.exe
+q1:questionOne.exe
 	./questionOne
 
-questionOne.exe: questionOne.cpp
+questionOne.exe:questionOne.cpp
 	g++ questionOne.cpp -o questionOne
 
 q2: questionTwo.exe
 	./questionTwo
 
-questionTwo.exe: questionTwo.cpp
+questionTwo.exe:questionTwo.cpp
 	g++ questionTwo.cpp -o questionTwo
+
+q3:questionThree.exe
+	./questionThree
+
+questionThree.exe:questionThree.cpp
+	g++ questionThree.cpp -o questionThree
+
+q4: questionFour.exe
+	./questionFour
+
+questionFour.exe:questionFour.cpp
+	g++ questionFour.cpp -o questionFour
 
 clean:
 	rm -f questionTwo
 	rm -f questionOne
+	rm -f questionThree
+	rm -f questionFour

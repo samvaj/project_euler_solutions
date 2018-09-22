@@ -14,6 +14,6 @@ int questionOne() {
 }
 
 int main () {
-	printf("The answer to this question is : %i \n", questionOne());
+	printf("The sum of all multiples of 3 and 5 below 1000 is : %i \n", questionOne());
 	return 0;
 }
