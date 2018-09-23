@@ -1,4 +1,4 @@
-all:q1 q2 q3 q4
+all:q1 q2 q3 q4 q5
 
 q1:questionOne.exe
 	./questionOne
@@ -35,3 +35,4 @@ clean:
 	rm -f questionOne
 	rm -f questionThree
 	rm -f questionFour
+	rm -f questionFive
