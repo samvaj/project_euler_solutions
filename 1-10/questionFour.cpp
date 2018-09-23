@@ -3,8 +3,6 @@
 
 // Find the largest palindrome number that's the product of two 3-digit numbers
 // Solving this the hard way = there's less than a million possibilities so it's pretty cheap to do this
-// WIP needs to be fixed
-
 
 // only needed for numbers greater than 100k and less than 1M so we only need to validate for 6 digits
 bool isPalindrome(int x) {
@@ -16,9 +14,10 @@ int questionFour() {
 	int temp;
 	for (int i = 100; i < 1000; i++) {
 		for (int j = i; j < 1000; j++) {
-			if (i*j > 100000) {
-				if (isPalindrome(i*j)) {
-					max = (i*j);
+			temp = i*j;
+			if (temp > 99999) {	
+				if (isPalindrome(temp)) {
+					max = (temp > max) ? temp : max;
 				}
 			}
 		}

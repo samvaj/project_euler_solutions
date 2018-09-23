@@ -18,11 +18,17 @@ q3:questionThree.exe
 questionThree.exe:questionThree.cpp
 	g++ questionThree.cpp -o questionThree
 
-q4: questionFour.exe
+q4:questionFour.exe
 	./questionFour
 
 questionFour.exe:questionFour.cpp
 	g++ questionFour.cpp -o questionFour
+
+q5:questionFive.exe
+	./questionFive
+
+questionFive.exe:questionFive.cpp
+	g++ questionFive.cpp -o questionFive
 
 clean:
 	rm -f questionTwo
