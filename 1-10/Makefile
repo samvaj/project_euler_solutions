@@ -1,4 +1,4 @@
-all:q1 q2 q3 q4 q5 q6 q7
+all:q1 q2 q3 q4 q5 q6 q7 q8
 
 q1:questionOne.exe
 	./questionOne
@@ -41,6 +41,13 @@ q7:questionSeven.exe
 
 questionSeven.exe:questionSeven.cpp
 	g++ questionSeven.cpp -o questionSeven
+
+q8:questionEight.exe
+	./questionEight
+
+questionEight.exe:questionEight.cpp
+	g++ questionEight.cpp -o questionEight
+
 clean:
 	rm -f questionTwo
 	rm -f questionOne
@@ -49,3 +56,4 @@ clean:
 	rm -f questionFive
 	rm -f questionSix
 	rm -f questionSeven
+	rm -f questionEight
