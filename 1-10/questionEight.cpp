@@ -26,6 +26,7 @@ long int questionEight() {
 }
 
 int main() {
+	printf("pinged");
 	printf("The product of the 13 adjacent digits, of the very big number is : %li \n", questionEight());
 	return 0;
 }
