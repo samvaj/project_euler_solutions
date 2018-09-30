@@ -1,66 +1,9 @@
-all:q1 q2 q3 q4 q5 q6 q7 q8 q9
+FILENAME:=  $(patsubst %.cpp,%.o,$(wildcard *.cpp))
 
-q1:questionOne.exe
-	./questionOne
+all:$(FILENAME)
 
-questionOne.exe:questionOne.cpp
-	g++ questionOne.cpp -o questionOne
-
-q2: questionTwo.exe
-	./questionTwo
-
-questionTwo.exe:questionTwo.cpp
-	g++ questionTwo.cpp -o questionTwo
-
-q3:questionThree.exe
-	./questionThree
-
-questionThree.exe:questionThree.cpp
-	g++ questionThree.cpp -o questionThree
-
-q4:questionFour.exe
-	./questionFour
-
-questionFour.exe:questionFour.cpp
-	g++ questionFour.cpp -o questionFour
-
-q5:questionFive.exe
-	./questionFive
-
-questionFive.exe:questionFive.cpp
-	g++ questionFive.cpp -o questionFive
-
-q6:questionSix.exe
-	./questionSix
-
-questionSix.exe:questionSix.cpp
-	g++ questionSix.cpp -o questionSix
-
-q7:questionSeven.exe
-	./questionSeven
-
-questionSeven.exe:questionSeven.cpp
-	g++ questionSeven.cpp -o questionSeven
-
-q8:questionEight.exe
-	./questionEight
-
-questionEight.exe:questionEight.cpp
-	g++ questionEight.cpp -o questionEight
-
-q9:questionNine.exe
-	./questionNine
-
-questionNine.exe:questionNine.cpp
-	g++ questionNine.cpp -o questionNine
+%.o : %.cpp
+	g++  $< -o $@;
 
 clean:
-	rm -f questionTwo
-	rm -f questionOne
-	rm -f questionThree
-	rm -f questionFour
-	rm -f questionFive
-	rm -f questionSix
-	rm -f questionSeven
-	rm -f questionEight
-	rm -f questionNine
+	rm -rf *.o
