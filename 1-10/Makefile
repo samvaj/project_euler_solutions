@@ -5,5 +5,8 @@ all:$(FILENAME)
 %.o : %.cpp
 	g++  $< -o $@;
 
+% : %.o
+	./$@.o;
+
 clean:
 	rm -rf *.o
